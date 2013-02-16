@@ -3,6 +3,11 @@ Text-Convert-PETSCII
 
 `Text::Convert::PETSCII` provides basic methods for converting text format between ASCII and PETSCII character sets.
 
+VERSION
+-------
+
+Version 0.02 (2013-02-16)
+
 INSTALLATION
 ------------
 
@@ -21,6 +26,8 @@ A comprehensive module documentation is available on [CPAN](http://search.cpan.o
 COPYRIGHT AND LICENCE
 ---------------------
 
-Copyright 2011 by Pawel Krol <pawelkrol@cpan.org>.
+Copyright (C) 2011, 2013 by Pawel Krol.
 
-This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+This library is free open source software; you can redistribute it and/or modify it under the same terms as Perl itself, either Perl version 5.8.6 or, at your option, any later version of Perl 5 you may have available.
+
+PLEASE NOTE THAT IT COMES WITHOUT A WARRANTY OF ANY KIND!
