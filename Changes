@@ -1,0 +1,6 @@
+Revision history for Perl extension Text::Convert::PETSCII.
+
+0.01  2011-04-22
+    - initial version (provides subroutines to convert text format between ASCII
+      and PETSCII character sets, and writing PETSCII character's textual
+      representation to a file handle)

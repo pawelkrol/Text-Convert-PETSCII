@@ -1,0 +1,8 @@
+lib/Text/Convert/PETSCII.pm
+t/01-petscii.t
+Changes
+Charset.h
+Makefile.PL
+MANIFEST
+PETSCII.xs
+README

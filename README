@@ -1,0 +1,21 @@
+Text::Convert::PETSCII 0.01
+===========================
+
+Text::Convert::PETSCII provides basic methods for converting text format between
+ASCII and PETSCII character sets.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+COPYRIGHT AND LICENCE
+
+Copyright 2011 by Pawel Krol <pawelkrol@cpan.org>.
+
+This program is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.
