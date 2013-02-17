@@ -1,5 +1,10 @@
 Revision history for Perl extension Text::Convert::PETSCII.
 
+0.03  2013-02-17
+    - reverted previous patch and fixed failing unit-tests for Perl 5.6.2 by
+      switching IO::Capture to Capture::Tiny which is able to correctly capture
+      the contents written into standard output and standard error filehandles
+
 0.02  2013-02-16
     - added minimum required version of Perl 5.8.0 for this distribution due to
       failing unit-tests for Perl 5.6.2 which is unaware of the SIGALRM signal,

@@ -6,17 +6,17 @@ Text-Convert-PETSCII
 VERSION
 -------
 
-Version 0.02 (2013-02-16)
+Version 0.03 (2013-02-17)
 
 INSTALLATION
 ------------
 
 To install this module type the following:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+    perl Makefile.PL
+    make
+    make test
+    make install
 
 DOCUMENTATION
 -------------

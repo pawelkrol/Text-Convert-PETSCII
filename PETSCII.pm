@@ -36,7 +36,7 @@ $EXPORT_TAGS{'all'} = [ @{$EXPORT_TAGS{'convert'}}, @{$EXPORT_TAGS{'display'}} ]
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Carp qw/carp croak/;
 use Data::Dumper;
@@ -261,11 +261,11 @@ Pawel Krol, E<lt>pawelkrol@cpan.orgE<gt>.
 
 =head1 VERSION
 
-Version 0.02 (2013-02-16)
+Version 0.03 (2013-02-17)
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2011 by Pawel Krol <pawelkrol@cpan.org>.
+Copyright 2011, 2013 by Pawel Krol <pawelkrol@cpan.org>.
 
 This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 
