@@ -20,6 +20,12 @@ Text::Convert::PETSCII - ASCII/PETSCII text converter
   # Write PETSCII single character's textual representation to a file handle:
   write_petscii_char($file_handle, $petscii_char);
 
+  # Validate whether given PETSCII string text may normally be printed out:
+  my $is_printable = is_printable_petscii_string($petscii_string);
+
+  # Validate whether given text may be considered a valid PETSCII string:
+  my $is_valid = is_valid_petscii_string($text_string);
+
 =head1 DESCRIPTION
 
 This package provides two basic methods for converting text format between ASCII and PETSCII character sets. PETSCII stands for the "PET Standard Code of Information Interchange" and is also known as CBM ASCII. PETSCII character set has been widely used in Commodore Business Machines (CBM)'s 8-bit home computers, starting with the PET from 1977 and including the VIC-20, C64, CBM-II, Plus/4, C16, C116 and C128.
@@ -32,7 +38,8 @@ use base qw(Exporter);
 our %EXPORT_TAGS = ();
 $EXPORT_TAGS{'convert'} = [ qw(&ascii_to_petscii &petscii_to_ascii) ];
 $EXPORT_TAGS{'display'} = [ qw(&set_petscii_write_mode &write_petscii_char) ];
-$EXPORT_TAGS{'all'} = [ @{$EXPORT_TAGS{'convert'}}, @{$EXPORT_TAGS{'display'}} ];
+$EXPORT_TAGS{'validate'} = [ qw(&is_printable_petscii_string &is_valid_petscii_string) ];
+$EXPORT_TAGS{'all'} = [ @{$EXPORT_TAGS{'convert'}}, @{$EXPORT_TAGS{'display'}}, @{$EXPORT_TAGS{'validate'}} ];
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw();
 
@@ -204,6 +211,55 @@ sub write_petscii_char {
     return;
 }
 
+=head2 is_printable_petscii_string
+
+Validate whether given PETSCII string text may normally be printed out:
+
+  my $is_printable = is_printable_petscii_string($petscii_string);
+
+Returns true value upon successful validation, and false otherwise. False value will also be immediately returned when text string that is given as an argument is not a PETSCII string at all.
+
+=cut
+
+sub is_printable_petscii_string {
+    my ($text_string) = @_;
+
+    return 0 unless is_valid_petscii_string($text_string);
+
+    return 1 if length $text_string == 0;
+
+    unless ($text_string =~ m/^[^\x20-\x7f\xa0-\xff]*$/g) {
+        return 1;
+    }
+
+    return 0;
+}
+
+=head2 is_valid_petscii_string
+
+Validate whether given text may be considered a valid PETSCII string:
+
+  my $is_valid = is_valid_petscii_string($text_string);
+
+Returns true value upon successful validation, and false otherwise.
+
+=cut
+
+sub is_valid_petscii_string {
+    my ($text_string) = @_;
+
+    return 0 unless defined $text_string;
+    return 0 if ref $text_string;
+
+    return 1 if length $text_string == 0;
+
+    unless ($text_string =~ m/^[^\x00-\xff]*$/g) {
+        return 1;
+    }
+
+    return 0;
+}
+
 # TODO: Consider adding this method to the public interface of current package:
 sub _petscii_to_screen_code {
     my ($num_petscii) = @_;
@@ -251,7 +307,10 @@ C<convert> tag adds L</ascii_to_petscii> and L</petscii_to_ascii> subroutines to
 C<display> tag adds L</set_petscii_write_mode> and L</write_petscii_char> subroutines to the list of symbols to be imported into the caller's namespace
 
 =item *
-C<all> tag adds all subroutines listed by C<convert> and C<display> tags to the list of exported symbols
+C<validate> tag adds L</is_printable_petscii_string> and </is_valid_petscii_string> subroutines to the list of symbols to be imported into the caller's namespace
+
+=item *
+C<all> tag adds all subroutines listed by C<convert>, C<display>, and C<validate> tags to the list of exported symbols
 
 =back
 

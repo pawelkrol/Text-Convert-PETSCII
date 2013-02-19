@@ -1,4 +1,3 @@
-t/01-petscii.t
 Changes
 Charset.h
 Makefile.PL
@@ -6,3 +5,5 @@ MANIFEST
 PETSCII.pm
 PETSCII.xs
 README
+t/01-petscii.t
+t/02-validation.t

@@ -1,5 +1,10 @@
 Revision history for Perl extension Text::Convert::PETSCII.
 
+0.04  2013-02-19
+    - added new methods to validate if given text may be considered a valid
+      PETSCII string and testing whether given PETSCII string may be printed
+      out
+
 0.03  2013-02-17
     - reverted previous patch and fixed failing unit-tests for Perl 5.6.2 by
       switching IO::Capture to Capture::Tiny which is able to correctly capture
