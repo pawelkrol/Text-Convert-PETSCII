@@ -1,9 +1,12 @@
 Revision history for Perl extension Text::Convert::PETSCII.
 
-0.04  2013-02-19
+0.04  2013-02-24
     - added new methods to validate if given text may be considered a valid
-      PETSCII string and testing whether given PETSCII string may be printed
+      PETSCII string and testing whether given PETSCII string can be printed
       out
+    - added two new conversion subroutines: "screen_codes_to_petscii" and
+      "petscii_to_screen_codes", which can be used to convert text strings
+      between PETSCII character set and CBM screen codes
 
 0.03  2013-02-17
     - reverted previous patch and fixed failing unit-tests for Perl 5.6.2 by

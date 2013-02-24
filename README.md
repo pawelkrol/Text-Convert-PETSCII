@@ -6,7 +6,7 @@ Text-Convert-PETSCII
 VERSION
 -------
 
-Version 0.03 (2013-02-17)
+Version 0.04 (2013-02-24)
 
 INSTALLATION
 ------------
