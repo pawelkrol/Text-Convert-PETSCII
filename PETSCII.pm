@@ -448,10 +448,10 @@ C<convert> tag adds L</ascii_to_petscii> and L</petscii_to_ascii> subroutines to
 C<display> tag adds L</set_petscii_write_mode> and L</write_petscii_char> subroutines to the list of symbols to be imported into the caller's namespace
 
 =item *
-C<screen> tag adds L</screen_codes_to_petscii> and </petscii_to_screen_codes> subroutines to the list of symbols to be imported into the caller's namespace
+C<screen> tag adds L</screen_codes_to_petscii> and L</petscii_to_screen_codes> subroutines to the list of symbols to be imported into the caller's namespace
 
 =item *
-C<validate> tag adds L</is_printable_petscii_string> and </is_valid_petscii_string> subroutines to the list of symbols to be imported into the caller's namespace
+C<validate> tag adds L</is_printable_petscii_string> and L</is_valid_petscii_string> subroutines to the list of symbols to be imported into the caller's namespace
 
 =item *
 C<all> tag adds all subroutines listed by C<convert>, C<display>, C<screen>, and C<validate> tags to the list of exported symbols
