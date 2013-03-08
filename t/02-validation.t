@@ -48,12 +48,16 @@ BEGIN { use_ok(q{Text::Convert::PETSCII}, qw{:all}) };
     ok(is_printable_petscii_string($text_string), 'upper-cased ASCII string is printable PETSCII string');
 }
 #########################
+SKIP:
 {
+    skip 'utf-8 validation unless perl version >= 5.8', 1 if $] < 5.008;
     my $text_string = chr 0x0100;
     ok(!is_valid_petscii_string($text_string), 'text string containing a UTF-8 wide character is not a valid PETSCII string');
 }
 #########################
+SKIP:
 {
+    skip 'utf-8 validation unless perl version >= 5.8', 1 if $] < 5.008;
     my $text_string = chr 0x0100;
     ok(!is_printable_petscii_string($text_string), 'text string containing a UTF-8 wide character is not printable PETSCII string');
 }

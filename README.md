@@ -6,7 +6,7 @@ Text-Convert-PETSCII
 VERSION
 -------
 
-Version 0.04 (2013-02-24)
+Version 0.05 (2013-03-08)
 
 INSTALLATION
 ------------
@@ -21,7 +21,7 @@ To install this module type the following:
 DOCUMENTATION
 -------------
 
-A comprehensive module documentation is available on [CPAN](http://search.cpan.org/~pawelkrol/Text-Convert-PETSCII/lib/Text/Convert/PETSCII.pm).
+A comprehensive module documentation is available on [CPAN](http://search.cpan.org/~pawelkrol/Text-Convert-PETSCII/PETSCII.pm).
 
 COPYRIGHT AND LICENCE
 ---------------------

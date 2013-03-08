@@ -1,5 +1,11 @@
 Revision history for Perl extension Text::Convert::PETSCII.
 
+0.05  2013-03-08
+    - skipped UTF-8 validation unit-tests for Perl 5.6.2, because regular
+      expression engine in this version of Perl does not support matching
+      of individual UTF-8 characters, treating them as an encoded sequence
+      of bytes instead
+
 0.04  2013-02-24
     - added new methods to validate if given text may be considered a valid
       PETSCII string and testing whether given PETSCII string can be printed
